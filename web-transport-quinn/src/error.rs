@@ -107,7 +107,7 @@ pub enum ReadExactError {
 impl From<quinn::ReadExactError> for ReadExactError {
     fn from(e: quinn::ReadExactError) -> Self {
         match e {
-            quinn::ReadExactError::FinishedEarly => ReadExactError::FinishedEarly,
+            quinn::ReadExactError::FinishedEarly(..) => ReadExactError::FinishedEarly,
             quinn::ReadExactError::ReadError(e) => ReadExactError::ReadError(e.into()),
         }
     }

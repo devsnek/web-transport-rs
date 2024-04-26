@@ -1,7 +1,7 @@
 // Based on Quinn: https://github.com/quinn-rs/quinn/tree/main/quinn-proto/src
 // Licensed under Apache-2.0 OR MIT
 
-use std::{convert::TryInto, fmt};
+use std::fmt;
 
 use bytes::{Buf, BufMut};
 use thiserror::Error;

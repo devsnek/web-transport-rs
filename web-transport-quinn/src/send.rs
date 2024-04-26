@@ -87,7 +87,9 @@ impl tokio::io::AsyncWrite for SendStream {
         cx: &mut Context<'_>,
         buf: &[u8],
     ) -> Poll<io::Result<usize>> {
-        Pin::new(&mut self.stream).poll_write(cx, buf)
+        Pin::new(&mut self.stream)
+            .poll_write(cx, buf)
+            .map_err(Into::into)
     }
 
     fn poll_flush(mut self: Pin<&mut Self>, cx: &mut Context) -> Poll<io::Result<()>> {

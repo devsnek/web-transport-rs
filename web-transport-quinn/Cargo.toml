@@ -16,9 +16,9 @@ categories = ["network-programming", "web-programming"]
 [dependencies]
 web-transport-proto = { path = "../web-transport-proto", version = "0.1" }
 
-quinn = "0.10"
+quinn = { git = "https://github.com/quinn-rs/quinn.git", rev = "af30cbdc4bc77e8582dae6887d2c099795135282" }
+quinn-proto = { git = "https://github.com/quinn-rs/quinn.git", rev = "af30cbdc4bc77e8582dae6887d2c099795135282" }
 bytes = "1"
-quinn-proto = "0.10"
 http = "0.2"
 thiserror = "1"
 futures = "0.3"

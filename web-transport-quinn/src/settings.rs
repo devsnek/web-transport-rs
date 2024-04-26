@@ -28,7 +28,6 @@ pub struct Settings {
     // A reference to the send/recv stream, so we don't close it until dropped.
     #[allow(dead_code)]
     send: quinn::SendStream,
-
     #[allow(dead_code)]
     recv: quinn::RecvStream,
 }
